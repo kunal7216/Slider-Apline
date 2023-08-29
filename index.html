@@ -1,1 +1,74 @@
-
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17974499/pexels-photo-17974499/free-photo-of-light-people-woman-summer.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/1666025/pexels-photo-1666025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17843976/pexels-photo-17843976/free-photo-of-a-sunflower-field-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17772401/pexels-photo-17772401/free-photo-of-portrait-of-woman-taking-a-photo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17852294/pexels-photo-17852294/free-photo-of-city-landscape-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/7525051/pexels-photo-7525051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/15666565/pexels-photo-15666565/free-photo-of-young-woman-with-a-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17854099/pexels-photo-17854099/free-photo-of-sunlight-over-couple-diving.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17616208/pexels-photo-17616208/free-photo-of-strawberries-in-basket.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17813816/pexels-photo-17813816/free-photo-of-young-redhead-reading-a-book-at-an-outdoor-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="https://images.pexels.com/photos/17838732/pexels-photo-17838732/free-photo-of-woman-with-horse.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image">
+      <div class="slider__info">
+        <h2>This is a card</h2>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
